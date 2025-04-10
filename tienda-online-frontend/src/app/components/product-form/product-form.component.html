@@ -1,0 +1,10 @@
+<h2>➕ Agregar nuevo producto</h2>
+
+<form (ngSubmit)="agregarProducto()" #formProducto="ngForm" class="formulario">
+  <input type="text" name="nombre" [(ngModel)]="producto.nombre" placeholder="Nombre del producto" required>
+  <input type="text" name="descripcion" [(ngModel)]="producto.descripcion" placeholder="Descripción" required>
+  <input type="number" name="precio" [(ngModel)]="producto.precio" placeholder="Precio" required>
+  <input type="text" name="imagenUrl" [(ngModel)]="producto.imagenUrl" placeholder="URL de la imagen" required>
+
+  <button type="submit">Guardar producto</button>
+</form>

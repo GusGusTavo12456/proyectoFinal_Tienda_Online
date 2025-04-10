@@ -1,0 +1,179 @@
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #f9f871;
+  margin: 2rem auto 1rem;
+}
+
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.producto {
+  background-color: #121212;
+  border: 1px solid #2a2a2a;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.06);
+}
+
+.producto h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.producto p {
+  color: #cccccc;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.producto .precio {
+  font-weight: bold;
+  color: #8eff8e;
+  font-size: 1.1rem;
+}
+@media (max-width: 768px) {
+  .producto {
+    width: 90%;
+  }
+}
+.producto {
+  font-family: 'Poppins', sans-serif;
+}
+/* 🎨 Contenedor de botones */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ✏️ Botón Editar */
+.btn-editar {
+  background-color: #facc15; /* amarillo dorado */
+  color: #1f1f1f;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-editar:hover {
+  background-color: #eab308; /* amarillo más fuerte */
+}
+
+/* 🗑️ Botón Eliminar */
+.btn-eliminar {
+  background-color: #ef4444; /* rojo suave */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-eliminar:hover {
+  background-color: #dc2626; /* rojo intenso */
+}
+/* 📝 Estilos del formulario de edición */
+.formulario-edicion {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #3a3a3a;
+  border-radius: 15px;
+  background-color: #181818;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.formulario-edicion h3 {
+  color: #facc15;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Campos del formulario */
+.formulario-edicion input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.9rem;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: border 0.3s ease;
+}
+
+.formulario-edicion input:focus {
+  outline: none;
+  border-color: #facc15;
+}
+
+/* Botones del formulario */
+.formulario-edicion .btn-guardar {
+  background-color: #4ade80; /* verde */
+  color: #1f1f1f;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 0.6rem;
+  transition: background-color 0.3s;
+}
+
+.formulario-edicion .btn-guardar:hover {
+  background-color: #22c55e;
+}
+
+.formulario-edicion .btn-cancelar {
+  background-color: #f87171; /* rojo */
+  color: #1f1f1f;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-edicion .btn-cancelar:hover {
+  background-color: #ef4444;
+}

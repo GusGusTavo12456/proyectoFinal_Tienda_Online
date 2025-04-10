@@ -1,0 +1,43 @@
+<h2>📖 Productos disponibles 🙌</h2>
+
+<!-- ✅ Formulario de edición -->
+<div *ngIf="productoSeleccionado" class="formulario-edicion">
+  <h3>✏️ Editar producto</h3>
+  <input [(ngModel)]="productoSeleccionado.nombre" placeholder="Nombre del producto">
+  <input [(ngModel)]="productoSeleccionado.descripcion" placeholder="Descripción">
+  <input type="number" [(ngModel)]="productoSeleccionado.precio" placeholder="Precio">
+  <input [(ngModel)]="productoSeleccionado.imagenUrl" placeholder="URL de la imagen">
+  <button (click)="guardarCambios()" class="btn-guardar">💾 Guardar cambios</button>
+  <button (click)="cancelarEdicion()" class="btn-cancelar">❌ Cancelar</button>
+</div>
+
+<!-- 🛒 Lista de productos -->
+<div class="productos-container">
+  <div *ngFor="let producto of productos" class="producto">
+
+    <!-- Nombre -->
+    <h3 class="producto-nombre">{{ producto.nombre }}</h3>
+
+    <!-- Imagen -->
+    <img
+      [src]="producto.imagenUrl"
+      [alt]="producto.nombre"
+      class="producto-imagen"
+    >
+
+    <!-- Descripción -->
+    <p class="producto-descripcion">{{ producto.descripcion }}</p>
+
+    <!-- Precio -->
+    <p class="precio">
+      <strong>Precio:</strong> ${{ producto.precio }}
+    </p>
+
+    <!-- Botones de acción -->
+    <div class="botones">
+      <button (click)="editarProducto(producto)" class="btn-editar">✏️ Editar</button>
+      <button (click)="eliminarProducto(producto.id)" class="btn-eliminar">🗑️ Eliminar</button>
+    </div>
+
+  </div>
+</div>
